@@ -13,8 +13,8 @@ pipeline {
                     sh "pipenv install"
                     sh "pipenv run pip install checkov"
                     sh "pipenv run checkov -h"
-                    sh "pipenv run checkov -d deploy"
-                    sh "pipenv run checkov -f https://github.com/ps-store/order-web/tree/master/deploy/default-values.yaml"
+                    sh "pipenv run checkov -d aws"
+                    sh "pipenv run checkov -f default-values.tf"
                 }
 
 
